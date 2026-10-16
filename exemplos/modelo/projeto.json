@@ -1,0 +1,58 @@
+{
+  "titulo": "Contrata+ em 40 segundos",
+  "arquivo": "contrata-teaser",
+  "idioma": "pt-BR",
+  "formatos": ["v", "h"],
+  "tema": "claro",
+  "telas": "telas",
+  "narracao": "narracao",
+  "saida": "saida",
+  "musica": { "tipo": "sintetizada" },
+  "legenda": true,
+  "margens": {},
+  "zoomMax": 1.7,
+  "marca": { "vertigo": true, "cliente": null,
+             "linha": "*Contrata+* · Gestão de contratos", "cta": "vertigo.com.br" },
+  "etapas": ["Cadastrar", "Aprovar", "Assinar"],
+  "capitulos": {
+    "cadastro":   { "etapa": 0, "titulo": "O contrato em *3 passos*" },
+    "aprovacao":  { "etapa": 1, "titulo": "Aprovado com *um clique*" },
+    "assinatura": { "etapa": 2, "titulo": "Assinado *digitalmente*" }
+  },
+  "tomadas": [
+    { "kind": "gancho", "estilo": "manchete", "seg": ["n00"], "min": 4,
+      "telas": ["contratos-lista", "contrato-passo1-dados", "contrato-aprovacao"],
+      "textos": [ { "texto": "Quanto tempo leva para um contrato ser *assinado*?", "de": 0.1 } ] },
+
+    { "kind": "abertura", "seg": ["n01"], "min": 6, "tag": "CONTRATA+ · GESTÃO DE CONTRATOS",
+      "titulo": "Do cadastro à *assinatura*, num lugar só",
+      "telas": ["contratos-lista", "contrato-aprovacao", "contrato-assinado"] },
+
+    { "ch": "cadastro", "seg": ["n02"], "parts": [ {
+        "img": "contratos-lista",
+        "cam": [[0, null], [0.45, [440, 120, 640, 230]]],
+        "hl": [ { "u": 0.5, "r": [805, 176, 84, 20], "l": "Situação de cada contrato" } ] } ] },
+
+    { "ch": "cadastro", "seg": ["n03"], "parts": [
+      { "img": "contratos-lista", "u0": 0,
+        "cam": [[0, [440, 120, 640, 300]]],
+        "clicks": [ { "u": 0.6, "p": [968, 370] } ] },
+      { "img": "contrato-passo1-dados", "u0": 0.3,
+        "cam": [[0, null], [0.5, [40, 140, 700, 260]]],
+        "hl": [ { "u": 0.55, "r": [52, 177, 330, 43], "l": "Fornecedor" },
+                { "u": 0.8,  "r": [52, 344, 330, 43], "l": "Valor total" } ],
+        "clicks": [ { "u": 0.97, "p": [676, 432] } ] } ] },
+
+    { "ch": "aprovacao", "seg": ["n04"], "parts": [ {
+        "img": "contrato-aprovacao",
+        "cam": [[0, null], [0.35, [40, 120, 700, 90]], [0.7, null]],
+        "hl": [ { "u": 0.3, "r": [52, 151, 676, 43], "l": "Histórico do contrato" },
+                { "u": 0.7, "r": [52, 343, 166, 41], "l": "Aprovar", "lado": "abaixo" } ],
+        "clicks": [ { "u": 0.9, "p": [135, 363] } ] } ] },
+
+    { "ch": "assinatura", "seg": ["n05"], "parts": [ {
+        "img": "contrato-assinado", "cam": [[0, null]], "selo": { "em": 0.45 } } ] },
+
+    { "kind": "final", "seg": ["n06"], "tail": 1.4 }
+  ]
+}
